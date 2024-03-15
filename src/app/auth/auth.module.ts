@@ -7,21 +7,21 @@ import { LoginEmailComponent } from './components/login-email/login-email.compon
 import { LoginToolsComponent } from './components/login-tools/login-tools.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ModalComponent } from './components/modal/modal.component';
+import { ModalComponent } from '../modal/modal.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     RegisterComponent,
     LoginComponent,
-    ModalComponent
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     ReactiveFormsModule,
     LoginEmailComponent,
-    LoginToolsComponent
+    LoginToolsComponent,
+    ModalComponent
   ],
 })
 export class AuthModule { }

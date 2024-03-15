@@ -1,28 +1,35 @@
 .card-container{
   display: inline-block;
-  padding: 1.5rem 3rem;
-  height: 110px;
-  justify-content: start;
+  height: 90px;
   background-color: #ECFEFF;
   box-shadow: 5px 0px 10px #00000026;
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
   transition: width 0.1s ease;
-  z-index: -1;
   color: #536794;
   overflow: hidden;
-  width: 190px;
+  width: 160px;
   div{
-    /* display: none; */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-left: 2vw;
+    margin-top: 0px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease, margin-left 0.5s ease;
+    transition: opacity 0.1s ease, margin-left 0.1s ease;
+    overflow: hidden;
+    max-width: 70%;
   }
 }
 
 img {
+  height: 50px;
   filter: invert(33%) sepia(67%) saturate(567%) hue-rotate(180deg) brightness(60%) contrast(80%);
   opacity: .5;
+  margin-top: 20px;
+  margin-left: 40px;
 }
 
 .card-container:hover{
@@ -33,14 +40,10 @@ img {
 }
 
 .card-container:hover div{
-  margin-left: 2vw;
-  display: inline-block;
-  vertical-align: middle;
-  overflow: hidden;
-  max-width: 70%;
+  transition-delay: 0.11s;
   opacity: 1;
   visibility: visible;
-  transition-delay: 0.1s;
+  margin-top: 5px;
 }
 
 p{
@@ -54,4 +57,5 @@ h5{
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 0;
+  margin:0
 }

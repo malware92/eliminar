@@ -1,7 +1,12 @@
+<ng-template #TyC let-modal>
+  <div class="modal-body">
+    <app-modal (onAccept)="acceptTerms()" (onClose)="closeModal()"></app-modal>
+  </div>
+</ng-template>
 
 <!-- AUTH/REGISTER -->
 
-<div class="container pl-sm-5 pl-0" style="height: 100vh;">
+<div class="container pl-sm-5 pl-0" >
   <form [formGroup]="form"
     class="d-flex flex-column main-container justify-content-center" >
 
@@ -28,7 +33,7 @@
 
 
     <div class="terms-label">
-      <input id="terms" type="checkbox" class="input-check-default" formControlName="acceptTerms">
+      <input id="terms" type="checkbox" class="input-check-default" formControlName="acceptTerms" (click)="clickCheck($event)" value="true">
       <label for="terms">
         Acepto los términos y condiciones de la plataforma y la política de privacidad.
       </label>
@@ -43,4 +48,4 @@
   </form>
 </div>
 
-<app-modal></app-modal>
+

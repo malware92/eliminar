@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  step = 2;
+  step = 1;
 
   constructor(){
 
@@ -18,11 +18,10 @@ export class LoginComponent {
 
     switch( step ){
       case 1:
-        this.step = 2
+        this.step = 1
         break;
       case 2:
         this.step = 0
-
     }
   }
 }

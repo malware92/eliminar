@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const onlyNumbers = event => {\n  const allowedKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'];\n  if (!allowedKeys.includes(event.key) && isNaN(Number(event.key))) {\n    event.preventDefault();\n  }\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

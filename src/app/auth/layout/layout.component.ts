@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class LayoutComponent {
 
+  responsiveView = false;
+
   step: number = 1;
 
   textByStep = {
-    '=1': 'Para acceder a la plataforma ingresa con tu correo electrónico.',
+    '=1': 'Para acceder a la plataforma ingresa con tu correo electrónico. acceder a la plataforma acceder a la plataforma',
     '=2': 'Pulsa clic sobre la herramienta a la cual deseas ingresar.',
   }
 
