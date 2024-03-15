@@ -1,0 +1,8 @@
+<!-- AUTH/LOGING -->
+
+<app-login-email *ngIf="step === 1"
+  (onContinue)="onContinue($event)"></app-login-email>
+
+<app-login-tools *ngIf="step === 2"
+  ></app-login-tools>
+

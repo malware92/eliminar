@@ -1,0 +1,16 @@
+<div class="container pl-5" style="height: 100vh;">
+  <form [formGroup]="form" (ngSubmit)="continue()"
+    class="d-flex flex-column main-container justify-content-center" >
+
+    <input type="text" placeholder="Correo electrónico" class="input-text-default" formControlName="email">
+
+    <div class="d-flex justify-content-end">
+
+      <button class="button-default" type="submit"
+       [disabled]="!form.valid"
+      >Continuar</button>
+
+    </div>
+  </form>
+</div>
+

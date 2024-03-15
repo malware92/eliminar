@@ -1,0 +1,46 @@
+
+<!-- AUTH/REGISTER -->
+
+<div class="container pl-sm-5 pl-0" style="height: 100vh;">
+  <form [formGroup]="form"
+    class="d-flex flex-column main-container justify-content-center" >
+
+    <input
+      type="text" placeholder="Correo electrónico" class="input-text-default"
+      formControlName="email" id='email'>
+    <input
+      type="text" placeholder="Nombres" class="input-text-default"
+      formControlName="names" id='names'>
+    <input
+      type="text" placeholder="Apellidos" class="input-text-default"
+      formControlName="lastNames" id='lastNames'>
+    <input
+      type="text" placeholder="Empresa" class="input-text-default"
+      formControlName="company" id='company'>
+    <input
+      type="text" placeholder="Celular" class="input-text-default"
+      formControlName="phone" id='phone' (keypress)="onlyNumbers($event)">
+
+    <select formControlName="rol" class="select-default">
+      <option value="0" selected=true>Seleccione un rol</option>
+      <option *ngFor="let rol of roles" [value]="rol.value" selected=true>{{rol.label}}</option>
+    </select>
+
+
+    <div class="terms-label">
+      <input id="terms" type="checkbox" class="input-check-default" formControlName="acceptTerms">
+      <label for="terms">
+        Acepto los términos y condiciones de la plataforma y la política de privacidad.
+      </label>
+    </div>
+    <div class="d-flex justify-content-end">
+
+      <button class="button-default" type="submit"
+       [disabled]="!form.valid"
+      >Continuar</button>
+
+    </div>
+  </form>
+</div>
+
+<app-modal></app-modal>
